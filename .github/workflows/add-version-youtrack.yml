@@ -56,7 +56,7 @@ jobs:
         customHeaders: '{"Authorization": "${{ env.YOUTRACK_AUTH_TOKEN }}"}'
         data: '{ "name": "${{ steps.extract_branch.outputs.branch }}", "$type": "VersionBundleElement" }'
         method: POST
-        url: "https://cmiag.myjetbrains.com/api/admin/projects/69-45/customFields/${{ inputs.youtrack_field_id }}/bundle/values?fields=id,name"
+        url: "https://cmiag.myjetbrains.com/api/admin/projects/69-28/customFields/${{ inputs.youtrack_field_id }}/bundle/values?fields=id,name"
           
  updater:
     needs: setup
