@@ -11,7 +11,7 @@ jobs:
     name: Generelle Codeowners (Alle ohne Lernende und neue Mitarbeiter)
     runs-on: ubuntu-latest
     env:
-      codeowners: "borgiman;gregorbosshard;urva;Matthias-Hess;fdc-cmi;EliaSaSe;bschaeublin;cmiagmbu;cmiagika;HeinzBiglerCMI;DenoshanRajasingam;Luca-Guettinger;jweiss27;juergotter;andreaszingg;marco554;LukasMerz;OliverBecker92;PhilipCereto;cmimar01;SimonSchwendele;cmiagpsc"
+      codeowners: "borgiman;gregorbosshard;urva;Matthias-Hess;EliaSaSe;bschaeublin;cmiagmbu;cmiagika;HeinzBiglerCMI;DenoshanRajasingam;Luca-Guettinger;jweiss27;juergotter;andreaszingg;marco554;LukasMerz;OliverBecker92;PhilipCereto;cmimar01;SimonSchwendele;cmiagpsc;tom-hacker"
     steps:
       - name: Check Codeowners
         env:
