@@ -25,7 +25,7 @@ on:
         required: false
         type: string
       version_override:
-        description: 'Expliciti version to set. This should be used when a non release branch should set the version'
+        description: 'Explicit version to set. This should be used when a non release branch should set the version'
         required: false
         type: string
 
