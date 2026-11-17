@@ -68,7 +68,7 @@ jobs:
       env:
           YOUTRACK_AUTH_TOKEN: ${{ secrets.YOUTRACK_AUTH_TOKEN }}
       run: |
-        curl -X POST "https://cmiag.myjetbrains.com/api/admin/projects/69-28/customFields/${{ inputs.youtrack_field_id }}/bundle/values?fields=id,name" \
+        curl -X POST "https://cmiag.youtrack.cloud/api/admin/projects/69-28/customFields/${{ inputs.youtrack_field_id }}/bundle/values?fields=id,name" \
         -H "Authorization: ${{ env.YOUTRACK_AUTH_TOKEN }}" \
         -H "Content-Type: application/json" \
         -d '{
@@ -90,7 +90,7 @@ jobs:
         with:
           customHeaders: '{"Authorization": "${{ env.YOUTRACK_AUTH_TOKEN }}"}'
           method: GET
-          url: "https://cmiag.myjetbrains.com/youtrack/api/issues/${{ matrix.message }}/customFields?fields=name,value(name)"
+          url: "https://cmiag.youtrack.cloud/api/issues/${{ matrix.message }}/customFields?fields=name,value(name)"
       - name: Build Post-Data
         id: builddata
         uses: actions/github-script@v6
@@ -113,4 +113,4 @@ jobs:
           customHeaders: '{"Authorization": "${{ env.YOUTRACK_AUTH_TOKEN }}", "Content-Type": "application/json", "Accept": "application/json"}'
           data: ${{ steps.builddata.outputs.result }}
           method: POST
-          url: "https://cmiag.myjetbrains.com/youtrack/api/issues/${{ matrix.message }}?fields=customFields(name,value(name,text))"
+          url: "https://cmiag.youtrack.cloud/api/issues/${{ matrix.message }}?fields=customFields(name,value(name,text))"
